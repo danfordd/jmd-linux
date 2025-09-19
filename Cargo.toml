@@ -1,0 +1,16 @@
+[package]
+name = "jmd"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3.0-or-later"
+
+[dependencies]
+nix = { version = "0.27", features = ["process", "ptrace"] }
+anyhow = "1.0"
+procfs = "0.10"
+memmem = "0.1"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"

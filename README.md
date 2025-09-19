@@ -1,0 +1,26 @@
+## License
+
+This project is licensed under the [GNU GPL v3](./LICENSE).
+
+<h1 align="center">JMD — Java Manipulations Detector</h1>
+<p align="center">
+    <b>A lightweight CLI tool for detecting Java process <code>JVMTI</code>/<code>JNI</code> injections on Linux</b><br>
+    <i>This is an improved version of a cool program: <a href="https://github.com/NotRequiem/InjGen">InjGen</a></i>
+</p>
+
+### Tested Clients
+- Lunar Client (all versions)
+- LabyMod (all versions)
+- Fabric (all versions)
+- Forge (1.8.9 - 1.21.8)
+- Vanilla (1.8.9 - 1.21.8)
+
+### Quick Start:
+```bash
+curl -sSL https://raw.githubusercontent.com/danfordd/jmd-linux/main/run.sh | sudo bash
+```
+
+### Notes
+1. Badlion Client will flag JMD due to them performing JNI injections.  
+2. JNI and JVMTI injections are not the only injection methods.  
+   If a client injects using the Forge API, it won't be detected — because Forge does not modify JVM memory directly.
